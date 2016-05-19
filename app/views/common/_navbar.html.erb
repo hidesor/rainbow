@@ -9,13 +9,24 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-          <%= link_to("Products",products_path) %>
+          <%= link_to("產品購買",products_path) %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <%= link_to("討論區",products_path) %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <%= link_to("關於我們",products_path) %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to "#" do  %>
             <!-- 加入了icon -->
+            <!--購物車 <i class="fa fa-thumbs-o-up"> </i> (0) -->
             購物車 <i class="fa fa-shopping-cart"> </i> (0)
           <% end %>
         </li>

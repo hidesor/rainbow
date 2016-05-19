@@ -10,7 +10,7 @@
       <% end %>
       <%= product.title %><br>
        $ <%= product.price %><br>
-      <%= truncate(product.description, :length => 50) %>
+      <p><%= truncate(product.description, :length => 40) %></p>
     </div>
   <% end %>
 </div>

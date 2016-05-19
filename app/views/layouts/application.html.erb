@@ -10,10 +10,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
+<!--position:fixed;-->
+<div class="fix" >
+   <%= render "common/navbar" %>
+</div>
+<br><br><br><br>
 <div class="container">
-    <%= render "common/navbar" %>
     <%= notice_message %>
     <%= yield %>
 </div>

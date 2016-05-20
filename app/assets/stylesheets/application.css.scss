@@ -32,9 +32,13 @@
       font-weight: bold;
       color: #0000ff;
     }
-
+    /* menu置頂 */
     .fix{
       width:100%;
       position:fixed;
       z-index:5;
+    }
+    /*首頁產品說明高度固定*/
+    .description_fix_h{
+      height: 60px;
     }

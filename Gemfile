@@ -37,6 +37,7 @@ gem "mini_magick"
 #use icon
 gem "font-awesome-rails"
 gem "aasm"
+gem "byebug"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

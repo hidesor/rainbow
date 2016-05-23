@@ -8,8 +8,10 @@ class OrdersController < ApplicationController
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
       #redirect_to order_path(@order)
-      #加了後url會隱碼
-      redirect_to order_path(@order.token)
+
+
+      current_cart.clean!   #訂單產生後購物車要被清空
+      redirect_to order_path(@order.token)  #加了後url會隱碼
     else
       render "carts/checkout"
     end

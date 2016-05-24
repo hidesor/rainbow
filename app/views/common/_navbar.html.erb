@@ -1,75 +1,80 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">ArtStore</a>
-    </div>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          <!-- <img src="https://s3-us-west-2.amazonaws.com/nirvana2016/image/blood-romance-banner.png" height="40" width="250" > -->
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to("產品購買",products_path) %>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li class="navbar-nav">
-          <%= link_to("討論區",products_path) %>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            關於我們
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-                <%= link_to("購買須知", products_path ) %>
-            </li>
-            <li>
-                <%= link_to("如何退貨", products_path ) %>
+            <!--  <a class="navbar-brand" style="color:#FF0000;font-size:10pt;" href="/">戰鬥中的男人啊！背負拯救地球的使命就是你血色的浪漫</a> -->
+             <a class="navbar-brand" style="color:#FF0000;" href=<%root_path%>>血色の浪漫</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                關於我們
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                    <%= link_to("購買須知", products_path ) %>
+                </li>
+                <li>
+                    <%= link_to("如何退貨", products_path ) %>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to carts_path do  %>
-            <!-- 加入了icon -->
-            <!--購物車 <i class="fa fa-thumbs-o-up"> </i> (0) -->
-            購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
-          <% end %>
-        </li>
-        <% if !current_user %>
-          <li> <%= link_to("登入", new_user_session_path) %> </li>
-        <% else %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Hi!, <%= current_user.name %>
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- 判斷是否管理者 -->
-              <% if current_user.admin? %>
+              <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <%= link_to("Admin 選單", admin_products_path ) %>
+                  <%= link_to("討論區",products_path) %>
                 </li>
-              <% end %>
-              <li>
-                <%= link_to("帳號設定", edit_user_registration_path )%>
-              </li>
-              <li>
-                <%= link_to("個人訂單列表", account_orders_path ) %>
-              </li>
-              <li>
-                <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
-              </li>
-            </ul>
-          </li>
-        <% end %>
+                <li>
+                  <%= link_to carts_path do  %>
+                    <!-- 加入了icon -->
+                    <!--購物車 <i class="fa fa-thumbs-o-up"> </i> (0) -->
+                    購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
+                  <% end %>
+                </li>
+                <% if !current_user %>
+                  <li> <%= link_to("登入", new_user_session_path) %> </li>
+                <% else %>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Hi!, <%= current_user.name %>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!-- 判斷是否管理者 -->
+                      <% if current_user.admin? %>
+                        <li>
+                          <%= link_to("Admin 選單", admin_products_path ) %>
+                        </li>
+                      <% end %>
+                      <li>
+                        <%= link_to("帳號設定", edit_user_registration_path )%>
+                      </li>
+                      <li>
+                        <%= link_to("個人訂單列表", account_orders_path ) %>
+                      </li>
+                      <li>
+                        <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
+                      </li>
+                    </ul>
+                  </li>
+                <% end %>
 
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+              </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>

@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
     def show
         @group = Group.find(params[:id])
         @posts = @group.posts
+        @user = @group.owner
     end
 
     def edit

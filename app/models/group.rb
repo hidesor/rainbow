@@ -1,6 +1,8 @@
 class Group < ActiveRecord::Base
     validates :title, presence: true
     has_many :posts
+    has_one :photo
+    accepts_nested_attributes_for :photo
 
     has_many :group_users
     has_many :members, through: :group_users, source: :user

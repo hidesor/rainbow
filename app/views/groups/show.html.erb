@@ -26,6 +26,7 @@
             <% @posts.each do |post| %>
             <tr>
                 <td><%= post.content %></td>
+                <!-- <td><!%= render_post_content(post) %></td> -->
                 <td>
                     <% if post.editable_by?(current_user) %>
 

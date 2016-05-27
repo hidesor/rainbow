@@ -9,6 +9,7 @@
         <!-- <td>#</td> -->
         <td>標題</td>
         <td>內容</td>
+        <!-- <td>發表人</td> -->
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
           <!-- <td>#</td> -->
           <td><%= link_to(group.title, group_path(group)) %></td>
           <td><%= truncate(group.description, :length => 20) %></td>
+          <!-- <td><!%= User.select("name").find([group.user_id]) %></td> -->
           <td>
 
           <% if group.editable_by?(current_user) %>

@@ -13,40 +13,57 @@
  *= require_tree .
  *= require_self
  */
-   @import "bootstrap-sprockets";
-   @import "bootstrap";
-   @import "font-awesome";
-
-
-   body {
-       font-family: Arial,Helvetica,sans-serif;
-       color: #626264;
-   }
-    .product-price{
-      padding-top: 20px;
-      padding-bottom: 20px;
-
-      font-size: 24px;
-      font-weight: bold;
-      color: #0000ff;
-    }
-    /* menu置頂 */
-    .fix{
-      width:100%;
-      position:fixed;
-      z-index:5;
-    }
-    /*首頁產品說明高度固定*/
-    .description_fix_h{
-      height: 60px;
-    }
-
-    .navbar-inverse {
-        background: rgba(50, 50, 50, 0.4);
-        border-color: rgba(0, 0, 0, 0);
-    }
-      /* banner 滑入的底色 */
-    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-        background-color: rgba(50, 50, 50, 0.4);
-        color: #FFF;
-    }
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+body,
+html {
+    font-family: Arial,Helvetica,sans-serif;
+    color: #626264;
+    height: 100%;
+}
+.product-price {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0000ff;
+}
+/* menu置頂 */
+.fix {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+/*首頁產品說明高度固定*/
+.description_fix_h {
+    height: 120px;
+    min-height: 120px;
+}
+.navbar-inverse {
+    /* background: rgba(100, 100, 100, 1); */
+    background-color: #000000;
+    border-color: rgba(0, 0, 0, 0);
+}
+/* banner 滑入的底色 */
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+    background-color: rgba(50, 50, 50, 1);
+    color: #FFF;
+}
+.footer {
+    width: 100%;
+    position: relative;
+    height: 130px;
+    margin-top: -130px;
+    /* background-color: rgba(50, 50, 50, 1); */
+    background-color: #000000;
+}
+.wrap {
+    min-height: 100%;
+}
+.footer_text {
+    padding-top: 20px;
+    padding-left: 20px;
+}

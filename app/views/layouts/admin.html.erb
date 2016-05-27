@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Artstore 後台</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <br><br><br><br>
-  <div class="container">
-    <%= render "common/navbar" %>
-    <div class="row">
-      <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-          <li> <%= link_to("Products", admin_products_path) %> </li>
-          <li> <%= link_to("Orders", admin_orders_path) %> </li>
-          <li> <%= link_to("Users", admin_users_path) %> </li>
-        </ul>
-      </div>
-      <div class="col-md-10">
-        <%= notice_message %>
-        <%= yield %>
-      </div>
-    </div>
-  </div>
-</body>
+    <head>
+        <title>Artstore 後台</title>
+        <link rel="icon" type="image/png" href="<%= image_path(" icon-03.png") %>">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="container">
+            <%= render "common/navbar" %>
+            <div class="row">
+                <div class="col-md-2">
+                    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+                        <li>
+                            <%= link_to("Products", admin_products_path) %>
+                        </li>
+                        <li>
+                            <%= link_to("Orders", admin_orders_path) %>
+                        </li>
+                        <li>
+                            <%= link_to("Users", admin_users_path) %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <%= notice_message %>
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <%= render "common/footer" %>
+    </body>
 </html>

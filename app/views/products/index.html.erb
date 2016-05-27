@@ -8,9 +8,11 @@
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
       <% end %>
-      <%= product.title %><br>
-       $ <%= product.price %><br>
-      <div class="description_fix_h"><%= truncate(product.description, :length => 50) %></div>
-    </div>
+          <div class="description_fix_h">
+              <%= product.title %><br>
+              $ <%= product.price %><br>
+              <%= truncate(product.description, :length => 40) %>
+          </div>
+      </div>
   <% end %>
 </div>

@@ -37,7 +37,7 @@ gem "mini_magick"
 #use icon
 gem "font-awesome-rails"
 gem "aasm"
-gem "byebug"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,6 +54,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "railroady"
 end
 
 group :development do

@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AirCloud</title>
-  <!-- icon測試ＯＫ -->
-  <!--<link rel="icon" type="image/png" href="<!%= image_path("icon-01.png") %>"> -->
-  <link rel="icon" type="image/png" href="<%= image_path("icon-03.png") %>" >
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<!--position:fixed;-->
-<div class="fix" >
-   <%= render "common/navbar" %>
-</div>
-<br><br><br><br>
-<div class="container">
-    <%= notice_message %>
-    <%= yield %>
-</div>
+    <head>
+        <title>AirCloud</title>
+        <link rel="icon" type="image/png" href="<%= image_path(" icon-03.png") %>">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <!--position:fixed;-->
+        <div class="fix">
+            <%= render "common/navbar" %>
 
-</body>
+        </div>
+        <br><br><br><br>
+        <div class="container wrap">
+            <%= notice_message %>
+            <%= yield %>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <%= render "common/footer" %>
+    </body>
 </html>

@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   has_many :items, class_name: "OrderItem", dependent: :destroy
   has_one  :info,  class_name: "OrderInfo", dependent: :destroy
-
+  #可以讓更新event資料時，也可以直接更新location的關聯資料。
   accepts_nested_attributes_for :info
 
   before_create :generate_token

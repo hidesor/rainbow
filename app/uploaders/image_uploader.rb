@@ -19,11 +19,11 @@ class ImageUploader < CarrierWave::Uploader::Base
    process resize_to_fit: [450, 450]
 
    version :thumb do
-     process resize_to_fill: [150,150]
+     process resize_to_fill: [80,80]
    end
 
    version :medium do
-     process resize_to_fill: [250,250]
+     process resize_to_fill: [175,175]
    end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

@@ -11,6 +11,9 @@ class OrdersController < ApplicationController
 
 
       current_cart.clean!   #訂單產生後購物車要被清空
+
+      #測試mail
+      OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)  #加了後url會隱碼
     else
       render "carts/checkout"

@@ -37,6 +37,8 @@
           <%= link_to("Edit", edit_admin_product_path(product)) %>
         </td>
       </tr>
+
     <% end %>
+    <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
   </tbody>
 </table>

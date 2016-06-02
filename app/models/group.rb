@@ -13,4 +13,5 @@ class Group < ActiveRecord::Base
     def editable_by?(user)
         user && user == owner
     end
+    self.per_page = 10
 end

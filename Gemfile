@@ -43,6 +43,14 @@ gem "letter_opener", group: :development
 # mail 加css
 gem "roadie", "2.4.3"
 
+#金流功能
+gem "pay2go"
+
+#用 figaro 管理機密資訊
+gem "figaro"
+
+#使用 s3上傳圖片
+gem "fog"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

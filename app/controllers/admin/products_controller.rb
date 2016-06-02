@@ -9,10 +9,12 @@ class Admin::ProductsController < ApplicationController
     def new
         @product = Product.new
         @photo = @product.build_photo
+        @type = @product.type
     end
 
     def edit
         @product = Product.find(params[:id])
+        @type = @product.photo
         @photo = if @product.photo.present?
                      @product.photo
                  else
@@ -43,6 +45,6 @@ class Admin::ProductsController < ApplicationController
     private
 
     def product_params
-        params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
+        params.require(:product).permit(:title, :description, :quantity,:type_id, :price, photo_attributes: [:image, :id])
     end
 end

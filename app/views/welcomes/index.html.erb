@@ -3,27 +3,14 @@
 <header id="myCarousel" class="carousel slide top_margin-bottom">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+      <% @types.each do |type| %>
+        <% if type.order==1 %>
+          <li data-target="#myCarousel" data-slide-to="<%= type.order %>" class="active"></li>
+        <% else %>
+         <li data-target="#myCarousel" data-slide-to="<%= type.order %>"></li>
+        <% end %>
+      <% end %>
     </ol>
-
-    <!-- Wrapper for slides
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('http://localhost:3000/uploads/photo/image/15/maxresdefault.jpg');"></div>
-            <div class="carousel-caption"></div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://localhost:3000/uploads/photo/image/17/nba_playoffs_wallpaper_by_kevin_tmac-d8pv9z5.png');"></div>
-            <div class="carousel-caption"></div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://localhost:3000/uploads/photo/image/16/heroes2_04_1464266892-2.jpg');"></div>
-            <div class="carousel-caption"></div>
-        </div>
-    </div>-->
-
     <div class="carousel-inner">
       <% @types.each do |type| %>
         <% if type.order==1 %>
@@ -43,10 +30,6 @@
       <% end %>
 
     </div>
-
-
-
-
 
     <!-- Controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -162,7 +145,7 @@
 
     <hr>
 
-    <!-- Call to Action Section -->
+    <!-- Call to Action Section
     <div class="well">
         <div class="row">
             <div class="col-md-8">
@@ -172,7 +155,7 @@
                 <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
             </div>
         </div>
-    </div>
+    </div>-->
     <hr>
     <script>
         $('.carousel').carousel({
@@ -185,4 +168,4 @@
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.0 -->
-<!-- <script src="js/jquery-1.11.0.js"></script> -->
+<!--]] <script src="js/jquery-1.11.0.js"></script> -->

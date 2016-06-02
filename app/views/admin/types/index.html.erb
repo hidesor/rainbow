@@ -16,8 +16,6 @@
         <% @types.each do |type| %>
         <tr>
             <td>
-
-
                 <% if type.photo.present? %>
                   <%= image_tag(type.photo.image.thumb.url, class: "thumbnail") %>
                 <% else %>

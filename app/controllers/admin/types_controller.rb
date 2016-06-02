@@ -22,6 +22,7 @@ class Admin::TypesController < ApplicationController
 
     def update
       @type = Type.find(params[:id])
+
       if @type.update(type_params)
         redirect_to admin_types_path
       else
@@ -31,8 +32,6 @@ class Admin::TypesController < ApplicationController
 
     def create
       @type = Type.new(type_params)
-      @photo = @product.build_photo
-
       if @type.save
         redirect_to admin_types_path
       else

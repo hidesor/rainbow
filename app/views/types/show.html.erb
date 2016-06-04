@@ -1,17 +1,17 @@
-<h4>購買產品</h4>
-
 <div class="row">
-    <!-- 加入類別篩選-->
-    <!-- <% @type_n = nil  %> -->
-    <% @types.each do |type| %>
-    <%= link_to(type.name,type_path(type))  %>
-    <% end %>
+    <div class="col-md-6">
+        <h3>
+            <%= @type.name %>
+        </h3>
+        <div>
+            <p>
+                <%= @type.description %>
+            </p>
+        </div>
+    </div>
 </div>
-
-<hr>
 <% @products.each do |product| %>
-<!-- <% if product.type_id == @type_n || @type_n == nil %> -->
-<!-- <!%= product.type_id %>  -->
+
 <div class="col-xs-6 col-md-3 welcome-prod">
     <%= link_to product_path(product) do %>
     <% if product.photo.present? %>
@@ -28,6 +28,5 @@
         <p class="product_dec"><%= truncate(product.description, :length => 40) %></p>
     </div>
 </div>
+
 <% end %>
-<!--<% end %>-->
-</div>

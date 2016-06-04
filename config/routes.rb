@@ -18,6 +18,7 @@ Rails.application.routes.draw do
                 post :to_normal
             end
         end
+        resources :goods
     end
 
     namespace :account do
@@ -27,11 +28,14 @@ Rails.application.routes.draw do
     end
 
     resources :products do
+        collection do
+            get :type_by
+        end
         member do
             post :add_to_cart
         end
     end
-
+    resources :types
     resources :carts do
         collection do
             post :checkout

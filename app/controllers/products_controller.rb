@@ -1,10 +1,23 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all.order('created_at DESC')
+    @types = Type.all.order('created_at DESC')
+    #@products = Product.where(:type_id=>2)
+    @products = Product.all
   end
+
+
   def show
     @product = Product.find(params[:id])
   end
+
+  def type_by
+    @type = Type.find(1)
+    @product = @type.product
+    #@products = Type.product
+    #@products = Product.where(:type_id => params[:id])
+    #@products = Product.where(:type_id=>2)
+  end
+
   def add_to_cart
     @product = Product.find(params[:id])
 

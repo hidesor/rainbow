@@ -7,7 +7,6 @@
         <tr>
             <th>優惠好康</th>
             <th>好康說明</th>
-            <th>連結位置</th>
             <th></th>
         </tr>
     </thead>
@@ -19,9 +18,6 @@
             </td>
             <td>
                 <%= good.description %>
-            </td>
-            <td>
-                <%= good.url %>
             </td>
             <td>
                 <%= link_to("Edit", edit_admin_good_path(good)) %>

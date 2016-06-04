@@ -18,7 +18,7 @@
         <% else %>
           <div class="item">
         <% end %>
-        <%= link_to admin_type_path(type) do %>
+        <%= link_to type_path(type) do %>
           <% if type.photo.present? %>
             <div class="fill" style="background-image:url(<%=type.photo.image.medium.url %>)"></div>
             <div class="carousel-caption"></div>
@@ -93,7 +93,11 @@
                    </div>
                    <div class="panel-body">
                        <p class="welcome-good-text"><%= good.description %></p>
+                       <% if good.url? %>
                        <a href="<%= good.url %>" target="_blank" class="btn btn-default">Learn More</a>
+                       <% else %>
+                       <a href="/" class="btn btn-default">Learn More</a>
+                       <% end %>
                    </div>
                </div>
            </div>

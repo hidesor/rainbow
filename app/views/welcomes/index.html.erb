@@ -20,7 +20,7 @@
         <% end %>
         <%= link_to type_path(type) do %>
           <% if type.photo.present? %>
-            <div class="fill" style="background-image:url(<%=type.photo.image.medium.url %>)"></div>
+            <div class="fill" style="background-image:url(<%=type.photo.image.url %>)"></div>
             <div class="carousel-caption"></div>
           <% else %>
             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>

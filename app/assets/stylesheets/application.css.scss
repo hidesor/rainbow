@@ -81,7 +81,8 @@ html {
   margin-top:-50px;
   margin-left:10px;
   color: #FFFFFF;
-  text-shadow: 2px 2px #434a54;
+  /* text-shadow: 2px 2px #434a54; */
+  text-shadow: 2px 0 0 #666666, -2px 0 0 #666666, 0 2px 0 #666666, 0 -2px 0 #666666, 1px 1px #666666, -1px -1px 0 #666666, 1px -1px 0 #666666, -1px 1px 0 #666666;
   max-width: 160px;
 }
 

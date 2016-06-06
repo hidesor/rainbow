@@ -6,7 +6,8 @@
 <%= simple_form_for [:admin, @product] do |f| %>
 
 <div class="group">
-    <%= f.input :title %>
+    <%= f.label :title, "產品名稱" %>
+    <%= f.input :title, label: false %>
 </div>
 
 <div class="group">

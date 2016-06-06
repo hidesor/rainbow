@@ -28,23 +28,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        關於我們
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <%= link_to("網站說明", root_path ) %>
-                        </li>
-                        <li>
-                            <%= link_to("相關技術", root_path ) %>
-                        </li>
-                        <li>
-                            <%= link_to("關於我", root_path ) %>
-                        </li>
-                    </ul>
-                </li>
+              <li>
+                  <%= link_to("關於我們",welcomes_about_path) %>
+              </li>
                 <li>
                     <%= link_to("討論區",groups_path) %>
                 </li>

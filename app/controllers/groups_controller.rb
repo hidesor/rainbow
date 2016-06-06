@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :destroy]
     def index
         #@groups = Group.all
-        @groups = Group.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+        @groups = Group.all.order('created_at ASC').paginate(:page => params[:page], :per_page => 10)
     end
 
     def new

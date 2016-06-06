@@ -28,7 +28,7 @@
                     <% end %>
                 </td>
                 <td><%= link_to(group.title, group_path(group)) %></td>
-                <td><%= truncate(group.description, :length => 20) %></td>
+                <td><%= truncate(group.description, :length => 60) %></td>
                 <!-- <td><!%= User.select("name").find([group.user_id]) %></td> -->
                 <td>
 

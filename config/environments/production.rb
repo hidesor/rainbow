@@ -82,7 +82,7 @@ Rails.application.configure do
     end
     config.action_mailer.default_url_options = { host: 'rainbow-cloud.herokuapp.com' } # 你的 heroku app 網址
 
-    config.action_controller.asset_host = "https://assets%d.rainbow-cloud.herokuapp.com"
+    #config.action_controller.asset_host = 'http://assets%d.rainbow-cloud.herokuapp.com'
     #                                      https://rainbow-cloud.herokuapp.com  http://assets%d.artstore.com
 
 end
